@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Final Project Documentation</title>
+        <script type="text/javascript" src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            d3.select("body").append("p").text("Elle Huff Final Project Documentation")
+            d3.select("body").append("p").text("The final project was challenging yet rewarding. I have a limited coding background (1 semester of a Python introduction course), and I found D3 not as straightforward as Python. I think this was due to my lack of experience with HTML, JavaScript, and CSS. However, after several weeks of working on this project, I am very proud of how far I have come!")
+            d3.select("body").append("p").text("In 2023, I recorded the characteristics of each day that I took my dog, Arlo, to the dog park. This included the date, the number of dogs he saw, the weather, the time we arrived and departed, a busyness score of my day (1 being least busy), and more. I wanted to create a visualization based on this dataset and questions I had about taking Arlo to the dog park. How many dogs does Arlo see at the dog park in a year? How does day of the week affect that? What day of the week do we go the most? How much time do we spend at the park over the year? Does how busy we are impact how long we are there? Because there are so many variables, I struggled at first conceptualizing what to create. ")
+            d3.select("body").append("p").text("At first, I thought about creating a line graph. The x-axis would be the date and the y-axis would be dog interactions. However, after seeing the line graph, I realized it didn’t tell me the type of story I was looking for. It did not answer the questions I had. The line graph was fine but didn’t show me any patterns. At this point, I realized that I wanted more data on my visualization than just the dog interactions and dates. I immediately felt overwhelmed because I was not sure how I would accomplish this.")
+            d3.select("body").append("p").text("I remembered the textbook having a thorough explanation of bar charts and began brainstorming how a bar chart might suit this data. Ultimately, I decided on the day of the week for the x-axis and total dog interactions on the y-axis. I decided to use the day of the week for the x-axis because it would show me how a typical week may look. I started with Sunday because it is how I view a typical week. However, I did wonder at one point how the visualization would look if I started with Monday, so the weekend bars would be next to each other instead. Having the total dog interactions on the y-axis would allow me to see if there may be a pattern based on the day of the week. It would also allow me to add the total dog interactions and see how many total dogs Arlo interacted with in 2023. For the y-axis, I chose to extend my axis to 280 dog interactions because my largest bar was 270 dog interactions.")
+            d3.select("body").append("p").text("I decided to use blue and orange for my colors to be colorblind-friendly. I showed differences in dog interactions using shades of blue. For the tooltip hover, I chose orange. To be mindful of the bars and use of color, I added a 0.25 padding between each bar. I think in the future, adding an option click to order the bars in ascending or descending order would be interesting.")
+            d3.select("body").append("p").text("To be more informational, I added a tooltip with 3 more data points. This allowed me to explore more data based on the day of the week if I choose to hover over a specific day. For the additional data I chose to include total minutes at the park, my average busyness score, and the average number of dogs on that day of the week. Finally, I wrapped up my visualization with an animation. While the animation does not enhance the data, it engages the audience more.")
+            d3.select("body").append("p").text("How many dogs does Arlo see at the dog park in a year? How does day of the week affect that?")
+            
+            
+            var width = 400,
+            height = 400;
+
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var g = svg.append("g");
+
+            var img = g.append("svg:image")
+                .attr("xlink:href", "https://drive.google.com/file/d/1ESIxPdleH8QkHUTWre0n2TlxnY9wCFPW/view?usp=drive_link")
+                .attr("width", 200)
+                .attr("height", 200)
+                .attr("x", 228)
+                .attr("y",53);
+
+            d3.select("body").append("p").text("Based on the bars, I observed that Arlo interacted with the most dogs on Tuesdays (270 dogs) and the least number of dogs (158 dogs) on Saturdays. This was surprising to me because Tuesdays are typically very busy days in my life and on Saturdays, I thought I had more free time. My busyness inclination turned out to be true because my average busyness score for Tuesdays was 4, while only 2.5 for Saturdays. By using the tooltip and addition, I found that Arlo interacted with 1,459 total dogs in 2023. ")
+            d3.select("body").append("p").text("How much time do we spend at the park over the year? Does how busy we are impact how long we are there?")
+        
+            var width = 400,
+            height = 400;
+
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var g = svg.append("g");
+
+            var img = g.append("svg:image")
+                .attr("xlink:href", "https://drive.google.com/file/d/1ESIxPdleH8QkHUTWre0n2TlxnY9wCFPW/view?usp=drive_link")
+                .attr("width", 200)
+                .attr("height", 200)
+                .attr("x", 228)
+                .attr("y",53);
+
+            d3.select("body").append("p").text("By using the tooltip of each bar, I analyzed how much time we spent at the dog park. We spent the most time (2,177 minutes) on Tuesdays and the least amount of time (1,817 minutes) on Wednesdays. After adding the minutes from each bar, I discovered that in 2023 we spent 13,897 minutes or about 232 hours at the dog park. ")
+        
+        </script>
+    </body>
+</html>
